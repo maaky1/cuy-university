@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sesi 9 Cuy University</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Video Player</h1>
+      <video src="./assets/Electrons.mp4"></video>
+      <div class="video-component">
+        <button onclick="play()" class="btn btn-play">Play</button>
+        <button onclick="pause()" class="btn btn-pause">Pause</button>
+        <button onclick="minimize()" class="btn btn-minimize">Minimize</button>
+        <button onclick="fullscreen()" class="btn btn-fullscreen">
+          Fullscreen
+        </button>
+      </div>
+    </div>
+  </body>
+  <script>
+    const videoComponent = document.querySelector("video");
+
+    function play() {
+      console.log("Playing");
+      videoComponent.play();
+    }
+
+    function pause() {
+      console.log("Pause");
+      videoComponent.pause();
+    }
+
+    function minimize() {
+      console.log("Minimize");
+      videoComponent.requestPictureInPicture();
+    }
+
+    function fullscreen() {
+      console.log("Fullscreen");
+      videoComponent.requestFullscreen();
+    }
+  </script>
+</html>
